@@ -1,6 +1,8 @@
 'use client';
 
 import { Copy, Check, Wifi, WifiOff } from 'lucide-react';
+
+import { ThemeToggle } from '@/components/theme-toggle';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { useRoomStore } from '@/store/room-store';
@@ -32,16 +34,18 @@ export function RoomHeader() {
         </div>
       </div>
 
-      <div className="flex items-center gap-4 text-sm text-muted-foreground">
-        <span className="flex items-center gap-1.5">
-          {connected ? (
-            <Wifi className="h-4 w-4 text-green-500" />
-          ) : (
-            <WifiOff className="h-4 w-4 text-destructive" />
-          )}
-          {room.members.length} connected
-        </span>
-      </div>
+<div className="flex items-center gap-4 text-sm text-muted-foreground">
+<span className="flex items-center gap-1.5">
+    {connected ? (
+      <Wifi className="h-4 w-4 text-green-500" />
+    ) : (
+      <WifiOff className="h-4 w-4 text-destructive" />
+    )}
+    {room.members.length} connected
+  </span>
+
+  <ThemeToggle />
+</div>
     </header>
   );
 }
