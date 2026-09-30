@@ -36,6 +36,18 @@
     --text-secondary: rgba(0, 0, 0, 0.7);
     --text-muted: rgba(0, 0, 0, 0.5);
     --bg-overlay: rgba(255, 255, 255, 0.45);
+    --glass-hover-bg: rgba(0, 0, 0, 0.05);
+    --glass-hover-border: rgba(0, 0, 0, 0.15);
+    --glass-hover-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    --album-glow: rgba(124, 77, 255, 0.25);
+    --album-glow-playing: rgba(124, 77, 255, 0.45);
+    --glass-input-bg: rgba(0, 0, 0, 0.03);
+    --glass-input-border: rgba(0, 0, 0, 0.1);
+    --glass-input-focus-bg: rgba(0, 0, 0, 0.05);
+    --glass-input-focus-shadow: rgba(124, 77, 255, 0.15);
+    --scrollbar-track: rgba(0, 0, 0, 0.05);
+    --scrollbar-thumb: rgba(0, 0, 0, 0.15);
+    --scrollbar-thumb-hover: rgba(0, 0, 0, 0.3);
   }
 
   .dark {
@@ -70,6 +82,18 @@
     --text-secondary: rgba(255, 255, 255, 0.7);
     --text-muted: rgba(255, 255, 255, 0.5);
     --bg-overlay: rgba(10, 10, 14, 0.45);
+    --glass-hover-bg: rgba(255, 255, 255, 0.12);
+    --glass-hover-border: rgba(255, 255, 255, 0.24);
+    --glass-hover-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+    --album-glow: rgba(179, 136, 255, 0.25);
+    --album-glow-playing: rgba(179, 136, 255, 0.45);
+    --glass-input-bg: rgba(255, 255, 255, 0.05);
+    --glass-input-border: rgba(255, 255, 255, 0.1);
+    --glass-input-focus-bg: rgba(255, 255, 255, 0.08);
+    --glass-input-focus-shadow: rgba(179, 136, 255, 0.2);
+    --scrollbar-track: rgba(0, 0, 0, 0.1);
+    --scrollbar-thumb: rgba(255, 255, 255, 0.15);
+    --scrollbar-thumb-hover: rgba(255, 255, 255, 0.3);
   }
 
   * {
@@ -95,22 +119,22 @@
 }
 
 .glass-pane-hover:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.24);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+  background: var(--glass-hover-bg);
+  border-color: var(--glass-hover-border);
+  box-shadow: var(--glass-hover-shadow);
 }
 
 .glass-input {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #fff;
+  background: var(--glass-input-bg);
+  border: 1px solid var(--glass-input-border);
+  color: var(--text-primary);
   transition: all 0.2s ease;
 }
 
 .glass-input:focus {
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--glass-input-focus-bg);
   border-color: var(--primary-accent);
-  box-shadow: 0 0 15px rgba(179, 136, 255, 0.2);
+  box-shadow: 0 0 15px var(--glass-input-focus-shadow);
   outline: none;
 }
 
@@ -119,12 +143,12 @@
 }
 
 .glow-album {
-  box-shadow: 0 0 40px rgba(179, 136, 255, 0.25);
+  box-shadow: 0 0 40px var(--album-glow);
   transition: box-shadow 0.3s ease;
 }
 
 .glow-album.playing {
-  box-shadow: 0 0 50px rgba(179, 136, 255, 0.45);
+  box-shadow: 0 0 50px var(--album-glow-playing);
 }
 
 /* Custom Scrollbar for a premium dark look */
@@ -134,16 +158,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.1);
+  background: var(--scrollbar-track);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.15);
+  background: var(--scrollbar-thumb);
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--scrollbar-thumb-hover);
 }
 
 /* Skeleton loader animations */
