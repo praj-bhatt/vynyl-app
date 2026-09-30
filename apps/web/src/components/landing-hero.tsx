@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import { ThemeToggle } from '@/components/theme-toggle';
 import {
   Users,
   ArrowRight,
@@ -209,12 +210,12 @@ export function LandingHero() {
               </span>
             </div>
 
-            <div className="flex items-center gap-3.5 lg:hidden">
-              <span className="rounded-full bg-secondary px-3.5 py-1 text-[11px] font-bold text-secondary-foreground tracking-wider uppercase">
-                ✦ 100% Free
-              </span>
-            </div>
-          </div>
+            <div className="flex items-center gap-3.5">
+  <ThemeToggle />
+  <span className="rounded-full bg-secondary px-3.5 py-1 text-[11px] font-bold text-secondary-foreground tracking-wider uppercase">
+    ✦ 100% Free
+  </span>
+</div>
 
           <div className="space-y-5 mt-8 md:mt-12 mb-auto max-w-lg">
             <div className="space-y-3">
