@@ -4,7 +4,41 @@
 @import "tailwindcss/utilities";
 
 @layer base {
-  :root {
+    :root {
+    --background: 0 0% 98%;
+    --foreground: 240 10% 4%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 4%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 4%;
+    --primary: 263 70% 58%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 5% 92%;
+    --secondary-foreground: 240 10% 10%;
+    --muted: 240 5% 92%;
+    --muted-foreground: 240 4% 40%;
+    --accent: 240 5% 90%;
+    --accent-foreground: 240 10% 10%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5% 85%;
+    --input: 240 5% 85%;
+    --ring: 263 70% 58%;
+    --radius: 0.75rem;
+
+    /* Custom Glass Design System tokens */
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(0, 0, 0, 0.1);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    --primary-accent: #7C4DFF;
+    --primary-glow: rgba(124, 77, 255, 0.2);
+    --text-primary: #111111;
+    --text-secondary: rgba(0, 0, 0, 0.7);
+    --text-muted: rgba(0, 0, 0, 0.5);
+    --bg-overlay: rgba(255, 255, 255, 0.45);
+  }
+
+  .dark {
     --background: 240 10% 4%;
     --foreground: 0 0% 98%;
     --card: 240 10% 6%;
@@ -42,9 +76,8 @@
     @apply border-border;
   }
 
-  body {
+    body {
     @apply bg-background text-foreground antialiased;
-    background-color: #0a0a0e;
   }
 }
 
